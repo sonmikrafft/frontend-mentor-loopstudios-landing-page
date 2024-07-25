@@ -1,0 +1,62 @@
+@media (max-width: 39.9375em) {
+  .card {
+    width: calc(100% - 3rem);
+  }
+  .card__image {
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+  }
+}
+@media (min-width: 40em) {
+  .card {
+    width: 21.75rem;
+  }
+  .card__image {
+    width: 18.75rem;
+    height: 18.75rem;
+    padding-top: 0;
+  }
+}
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  text-align: left;
+  font-size: 0.9375rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  color: hsl(0, 0%, 0%);
+  line-height: 1.5;
+}
+body.noscroll {
+  overflow: hidden;
+}
+body h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+body p, body span {
+  margin: 0;
+  color: hsl(0, 0%, 41%);
+}
+body b {
+  font-weight: 400;
+}
+body .attribution {
+  font-size: 11px;
+  text-align: center;
+  color: black;
+}
+body .attribution a {
+  color: #7C2B8A;
+}
+
+/*# sourceMappingURL=style.css.map */
