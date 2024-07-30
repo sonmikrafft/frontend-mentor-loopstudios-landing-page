@@ -9,20 +9,59 @@ html {
 
 body {
   margin: 0;
-  text-align: left;
+  text-align: center;
   font-size: $font-m;
   font-family: "Josefin Sans", sans-serif;
   font-weight: $font-weight-s;
   color: $black;
   line-height: 1.5;
 
+  @include breakpoint-up(large) {
+    text-align: left;
+  }
+
   &.noscroll {
     overflow: hidden;
   }
 
   h1 {
-    font-size: $font-h1;
-    font-weight: $font-weight-m;
+    margin: 0;
+    line-height: 1;
+    font-size: $font-h1-s;
+    font-weight: $font-weight-s;
+    text-transform: uppercase;
+    text-align: left;
+
+    @include breakpoint-up(large) {
+      font-size: $font-h1-l;
+    }
+  }
+
+  h2 {
+    margin: 2rem 0 1.5rem 0;
+    line-height: 1;
+    font-size: $font-h2-s;
+    font-weight: $font-weight-s;
+    text-transform: uppercase;
+
+    @include breakpoint-up(large) {
+      font-size: $font-h2-l;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    font-size: $font-l;
+    font-weight: $font-weight-s;
+    line-height: 1;
+    text-align: left;
+    text-transform: uppercase;
+    color: $white;
+    opacity: 0.8;
+
+    @include breakpoint-up(large) {
+      font-size: $font-h2-s;
+    }
   }
 
   p, span {
@@ -32,6 +71,72 @@ body {
 
   b {
     font-weight: $font-weight-m;
+  }
+
+  a, a:visited, a:hover {
+    text-decoration: none;
+  }
+
+  a {
+    opacity: 80%;
+    transition: opacity 300ms ease-in-out;
+    color: $white;
+
+    &:hover {
+      opacity: 100%;
+      cursor: pointer;
+    }
+  }
+
+  .a--hovered {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 0.125rem;
+      width: 1.5rem;
+      left: 50%;
+      bottom: -0.5rem;
+      transform: translateX(-50%);
+      background: $white;
+      opacity: 0;
+      transition: opacity 300ms ease-in-out;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+
+  button {
+    background: transparent;
+    border: 2px solid $very-dark-gray;
+    padding: 0.75rem;
+    text-transform: uppercase;
+    font: inherit;
+    font-weight: $font-weight-m;
+    transition: background-color 300ms ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      color: $white;
+      background-color: $black;
+    }
+  }
+
+  // Visibility
+  .hide-for-mobile {
+    @include breakpoint-down(small){
+      display:none;
+    }
+  }
+
+  .hide-for-desktop {
+    @include breakpoint-up(medium){
+      display:none;
+    }
   }
 
   .attribution {
