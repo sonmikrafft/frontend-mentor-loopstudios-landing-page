@@ -4,16 +4,6 @@ const header = document.querySelector(".header");
 const fadeElems = document.querySelectorAll(".fade");
 
 /*
-* Helper Functions
-* */
-
-
-/*
-* Initialize
- */
-
-
-/*
 * Event Listeners
 * */
 btnHamburger.addEventListener("click", function () {
