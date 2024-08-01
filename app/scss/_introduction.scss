@@ -7,13 +7,14 @@
     height: 14rem;
     background-image: url("/images/mobile/image-interactive.jpg");
     background-size: contain;
-    background-position: left;
+    background-position: center;
     background-repeat: no-repeat;
 
     @include breakpoint-up(large) {
       width: auto;
       height: 31.25rem;
       background-image: url("/images/desktop/image-interactive.jpg");
+      background-position: left;
     }
 
 
@@ -24,6 +25,10 @@
     right: 0;
     bottom: 0;
     background-color: $white;
+
+    @include breakpoint-up(medium) {
+      padding: 0;
+    }
 
     @include breakpoint-up(large) {
       padding: 5.625rem 0 0 5.625rem;

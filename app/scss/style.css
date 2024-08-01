@@ -180,12 +180,12 @@ body button:hover {
   color: hsl(0, 0%, 100%);
   background-color: hsl(0, 0%, 0%);
 }
-@media (max-width: 39.9375em) {
+@media (max-width: 63.9375em) {
   body .hide-for-mobile {
     display: none;
   }
 }
-@media (min-width: 40em) {
+@media (min-width: 64em) {
   body .hide-for-desktop {
     display: none;
   }
@@ -312,7 +312,7 @@ body .attribution a {
   height: 14rem;
   background-image: url("/images/mobile/image-interactive.jpg");
   background-size: contain;
-  background-position: left;
+  background-position: center;
   background-repeat: no-repeat;
 }
 @media (min-width: 64em) {
@@ -320,6 +320,7 @@ body .attribution a {
     width: auto;
     height: 31.25rem;
     background-image: url("/images/desktop/image-interactive.jpg");
+    background-position: left;
   }
 }
 .introduction__text {
@@ -327,6 +328,11 @@ body .attribution a {
   right: 0;
   bottom: 0;
   background-color: hsl(0, 0%, 100%);
+}
+@media (min-width: 40em) {
+  .introduction__text {
+    padding: 0;
+  }
 }
 @media (min-width: 64em) {
   .introduction__text {
@@ -355,22 +361,33 @@ body .attribution a {
   gap: 1.5rem;
   padding-bottom: 2.125rem;
 }
-@media (min-width: 64em) {
+@media (min-width: 40em) {
+  .creations__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 87.5em) {
   .creations__grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 .creations__item {
+  display: flex;
+  align-items: end;
+  justify-content: flex-start;
+  padding: 1.5rem;
   position: relative;
   width: 100%;
+  min-width: 8rem;
   height: 7.5rem;
-  background-size: contain;
-  background-position: center;
+  background-size: cover;
+  background-position: center top;
   background-repeat: no-repeat;
 }
 @media (min-width: 64em) {
   .creations__item {
     height: 28.125rem;
+    padding: 2.5rem;
   }
 }
 .creations__item::before {
@@ -385,15 +402,10 @@ body .attribution a {
   transition: opacity 300ms ease-out;
 }
 .creations__item h3 {
-  position: absolute;
-  left: 1.5rem;
-  bottom: 1.5rem;
   width: 8rem;
 }
 @media (min-width: 64em) {
   .creations__item h3 {
-    left: 2.5rem;
-    bottom: 2.5rem;
     width: 12rem;
   }
 }
@@ -408,74 +420,74 @@ body .attribution a {
 }
 
 .deep-earth {
-  background: url("/images/mobile/image-deep-earth.jpg");
+  background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.7)), url("/images/mobile/image-deep-earth.jpg");
 }
 @media (min-width: 64em) {
   .deep-earth {
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)), url("/images/desktop/image-deep-earth.jpg");
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)), url("/images/desktop/image-deep-earth.jpg");
   }
 }
 
 .night-arcade {
-  background: url("/images/mobile/image-night-arcade.jpg");
+  background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.7)), url("/images/mobile/image-night-arcade.jpg");
 }
 @media (min-width: 64em) {
   .night-arcade {
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)), url("/images/desktop/image-night-arcade.jpg");
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)), url("/images/desktop/image-night-arcade.jpg");
   }
 }
 
 .soccer-team {
-  background: url("/images/mobile/image-soccer-team.jpg");
+  background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.7)), url("/images/mobile/image-soccer-team.jpg");
 }
 @media (min-width: 64em) {
   .soccer-team {
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)), url("/images/desktop/image-soccer-team.jpg");
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)), url("/images/desktop/image-soccer-team.jpg");
   }
 }
 
 .the-grid {
-  background: url("/images/mobile/image-grid.jpg");
+  background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.7)), url("/images/mobile/image-grid.jpg");
 }
 @media (min-width: 64em) {
   .the-grid {
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)), url("/images/desktop/image-grid.jpg");
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)), url("/images/desktop/image-grid.jpg");
   }
 }
 
 .from-up-above {
-  background: url("/images/mobile/image-from-above.jpg");
+  background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.7)), url("/images/mobile/image-from-above.jpg");
 }
 @media (min-width: 64em) {
   .from-up-above {
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)), url("/images/desktop/image-from-above.jpg");
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)), url("/images/desktop/image-from-above.jpg");
   }
 }
 
 .pocket-borealis {
-  background: url("/images/mobile/image-pocket-borealis.jpg");
+  background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.7)), url("/images/mobile/image-pocket-borealis.jpg");
 }
 @media (min-width: 64em) {
   .pocket-borealis {
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)), url("/images/desktop/image-pocket-borealis.jpg");
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)), url("/images/desktop/image-pocket-borealis.jpg");
   }
 }
 
 .curiosity {
-  background: url("/images/mobile/image-curiosity.jpg");
+  background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.7)), url("/images/mobile/image-curiosity.jpg");
 }
 @media (min-width: 64em) {
   .curiosity {
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)), url("/images/desktop/image-curiosity.jpg");
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)), url("/images/desktop/image-curiosity.jpg");
   }
 }
 
 .fisheye {
-  background: url("/images/mobile/image-fisheye.jpg");
+  background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.7)), url("/images/mobile/image-fisheye.jpg");
 }
 @media (min-width: 64em) {
   .fisheye {
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)), url("/images/desktop/image-fisheye.jpg");
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)), url("/images/desktop/image-fisheye.jpg");
   }
 }
 
@@ -483,6 +495,7 @@ body .attribution a {
   display: grid;
   gap: 1rem;
   grid-template-areas: "logo" "links" "social-media" "copyright";
+  grid-template-columns: 1fr;
   align-items: flex-start;
   justify-content: space-between;
   padding-top: 2.5rem;
@@ -493,6 +506,7 @@ body .attribution a {
 @media (min-width: 64em) {
   .footer {
     grid-template-areas: "logo social-media" "links copyright";
+    grid-template-columns: 1fr 1fr;
   }
 }
 .footer__logo {
@@ -539,6 +553,7 @@ body .attribution a {
 @media (min-width: 64em) {
   .footer__copyright {
     padding-bottom: 0;
+    text-align: right;
   }
 }
 
